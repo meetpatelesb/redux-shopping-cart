@@ -1,6 +1,8 @@
 import React from "react";
 
 const Home = (props) => {
+  console.log(props);
+  console.log(props,"props>>>>>>");
   return (
     <>
       <div className="add-to-cart">
@@ -23,7 +25,13 @@ const Home = (props) => {
           <span>Price: $ 2500</span>
         </div>
         <div className="btn-wrapper item">
-          <button>Add to cart</button>
+          <button
+            onClick={() =>
+              props.addToCartHandler({ price: 10000, name: "iphoneX" })
+            }
+          >
+            Add to cart
+          </button>
         </div>
       </div>
       <div className="cart-wrapper">
@@ -39,7 +47,13 @@ const Home = (props) => {
           <span>Price: $ 2500</span>
         </div>
         <div className="btn-wrapper item">
-          <button>Add to cart</button>
+          <button
+            onClick={() =>
+              props.addToCartHandler({ price: 25000, name: "iphoneXI" })
+            }
+          >
+            Add to cart
+          </button>
         </div>
       </div>
     </>
